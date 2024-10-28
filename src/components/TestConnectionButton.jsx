@@ -20,10 +20,10 @@ const TestConnectionButton = () => {
         status
     }
 }`
-
+    const api = window.config.apiUrl
     try {
       // Replace with your GraphQL endpoint
-      const response = await axios.post(`${process.env.REACT_APP_GRAPHQL_API_SERVICE}`, {
+      const response = await axios.post(api, {
         query,
       });
 
